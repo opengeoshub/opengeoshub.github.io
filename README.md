@@ -64,5 +64,7 @@
 - [GIS curriculum](https://github.com/opengeoshub/GIS-curriculum)
 - [BecaGIS Resources for QGIS](https://github.com/opengeoshub/BecaGIS-Resources)
 
-## OSM Contributions
+## Contributions
+- [A5 DGGS JS](https://github.com/felixpalmer/a5)
+- [A5 DGGS Python](https://github.com/felixpalmer/a5-py)
 - [Open Geospatial Hub on OSM](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Open_Geospatial_Hub)

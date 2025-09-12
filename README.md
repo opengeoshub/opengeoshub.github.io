@@ -29,11 +29,15 @@
 
 ## Vgrid DGGS
 - [vgrid](https://github.com/opengeoshub/vgrid), [vgrid on PyPI](https://pypi.org/project/vgrid/), [vgrid docs](https://vgrid.gishub.vn)
+
+- [vgrid plugin for QGIS](https://github.com/opengeoshub/vgridtools), [vgrid plugin on QGIS Plugin repo](https://plugins.qgis.org/plugins/vgridtools/)
+
 - [vgridpandas](https://github.com/opengeoshub/vgridpandas), [vgridpandas on PyPI](https://pypi.org/project/vgridpandas/), [vgridpandas docs](https://vgridpandas.gishub.vn)
 
-- [vgridjs](https://github.com/opengeoshub/vgridjs), [vgridjs on NPM](https://www.npmjs.com/package/vgridjs), [vgridjs docs](https://vgridjs.gishub.vn) 
 - [vgrid-maplibre](https://github.com/opengeoshub/vgrid-maplibre), [vgrid-maplibre on NPM](https://www.npmjs.com/package/vgrid-maplibre)
-- [vgrid plugin for QGIS](https://github.com/opengeoshub/vgridtools), [vgrid plugin on QGIS Plugin repo](https://plugins.qgis.org/plugins/vgridtools/)
+
+- [vgridjs](https://github.com/opengeoshub/vgridjs), [vgridjs on NPM](https://www.npmjs.com/package/vgridjs)
+
 - [vgrid Homepage](https://vgrid.vn)
 
 ## Vector Tiles

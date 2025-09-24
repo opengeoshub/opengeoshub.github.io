@@ -30,7 +30,7 @@
 ## Vgrid DGGS
 - [vgrid](https://github.com/opengeoshub/vgrid), [vgrid on PyPI](https://pypi.org/project/vgrid/), [vgrid docs](https://vgrid.gishub.vn)
 
-- [vgrid plugin for QGIS](https://github.com/opengeoshub/vgridtools), [vgrid plugin on QGIS Plugin repo](https://plugins.qgis.org/plugins/vgridtools/)
+- [vgrid plugin for QGIS](https://github.com/opengeoshub/vgridtools), [vgrid plugin on QGIS Plugin repo](https://plugins.qgis.org/plugins/vgridtools/), [vgrid plugin docs](https://vgridtools.gishub.vn)
 
 - [vgridpandas](https://github.com/opengeoshub/vgridpandas), [vgridpandas on PyPI](https://pypi.org/project/vgridpandas/), [vgridpandas docs](https://vgridpandas.gishub.vn)
 

@@ -38,7 +38,7 @@
 
 - [vgridjs](https://github.com/opengeoshub/vgridjs), [vgridjs on NPM](https://www.npmjs.com/package/vgridjs)
 
-- [vgrid Homepage](https://vgrid.vn)
+- [vgrid Homepage](https://vgridhome.gishub.vn)
 
 ## Vector Tiles
 - [vtiles](https://github.com/opengeoshub/vtiles)

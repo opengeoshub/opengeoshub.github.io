@@ -36,8 +36,6 @@
 
 - [vgrid-maplibre](https://github.com/opengeoshub/vgrid-maplibre), [vgrid-maplibre on NPM](https://www.npmjs.com/package/vgrid-maplibre)
 
-- [vgridjs](https://github.com/opengeoshub/vgridjs), [vgridjs on NPM](https://www.npmjs.com/package/vgridjs)
-
 - [vgrid Homepage](https://vgridhome.gishub.vn)
 
 ## Vector Tiles

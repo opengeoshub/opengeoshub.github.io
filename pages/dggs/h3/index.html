@@ -28,12 +28,12 @@
     <div id="map"></div>
     <!-- H3Grid.js -->
     <!-- <script src="https://unpkg.com/h3-js/dist/h3-js.umd.js"></script> -->
-    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
     <button onclick="exportToGeoJSON()" style="position: absolute; top: 10px; left: 10px;">
         Export
     </button>
 
     <script type="module">
+        import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
         import H3Grid from "https://unpkg.com/vgrid-maplibre/H3/H3Grid.js";
         // import H3Grid from "https://cdn.jsdelivr.net/gh/opengeoshub/vgrid-maplibre@main/H3/H3Grid.js";
         // import H3Grid from "./H3Grid.js";

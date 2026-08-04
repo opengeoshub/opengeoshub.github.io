@@ -65,4 +65,5 @@
 ## Contributions
 - [A5 DGGS JS](https://github.com/felixpalmer/a5)
 - [A5 DGGS Python](https://github.com/felixpalmer/a5-py)
+- [DGGG Plugin for GeoLibre](https://github.com/opengeos/GeoLibre)
 - [Open Geospatial Hub on OSM](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Open_Geospatial_Hub)

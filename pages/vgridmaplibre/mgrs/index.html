@@ -19,7 +19,7 @@
             height: 100vh;
         }
 
-        button {
+        #export-btn {
             position: absolute;
             top: 10px;
             left: 10px;
@@ -30,7 +30,7 @@
 
 <body>
     <div id="map"></div>
-    <button onclick="exportToGeoJSON()">Export</button>
+    <button id="export-btn" onclick="exportToGeoJSON()">Export</button>
 
     <script type="module">
         import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';

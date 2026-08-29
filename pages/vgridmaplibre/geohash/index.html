@@ -7,7 +7,7 @@
   <title>Geohash DGGS</title>
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/opengeoshub/vgridtools/refs/heads/main/images/vgrid.svg">
-  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.0.0-pre.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" />
   <style>
     body {
       margin: 0;
@@ -50,7 +50,7 @@
       center: [config.lng, config.lat],
       zoom: config.zoom,
     });
-    map.on('load', () => {
+    map.on('style.load', () => {
       map.addControl(new maplibregl.GlobeControl());
       try {
         const geohashGrid = new GeohashGrid(map, {

@@ -53,7 +53,7 @@
         })
 
         map.on('style.load', () => {
-            // map.addControl(new maplibregl.GlobeControl());
+            map.addControl(new maplibregl.GlobeControl());
             // map.showTileBoundaries = true;
             try {
                 const tilecodeGrid = new TilecodeGrid(map, {

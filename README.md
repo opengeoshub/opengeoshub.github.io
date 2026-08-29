@@ -34,7 +34,7 @@
 
 - [vgridpandas](https://github.com/opengeoshub/vgridpandas), [vgridpandas on PyPI](https://pypi.org/project/vgridpandas/), [vgridpandas docs](https://vgridpandas.gishub.vn)
 
-- [vgrid-maplibre](https://github.com/opengeoshub/vgrid-maplibre), [vgrid-maplibre on NPM](https://www.npmjs.com/package/vgrid-maplibre), [vgrid-mapLire Demo](https://opengeoshub.github.io/pages/dggs)
+- [vgrid-maplibre](https://github.com/opengeoshub/vgrid-maplibre), [vgrid-maplibre on NPM](https://www.npmjs.com/package/vgrid-maplibre), [vgrid-mapLire Demo](https://opengeoshub.github.io/pages/vgridmaplibre)
 
 - [vgrid Homepage](https://vgridhome.gishub.vn)
 

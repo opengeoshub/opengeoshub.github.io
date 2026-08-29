@@ -5,7 +5,6 @@
     <title>MapLibre Antimeridian</title>
 
     <!-- MapLibre GL JS -->
-    <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
 
     <style>
@@ -61,7 +60,8 @@
             <option value="https://raw.githubusercontent.com/opengeoshub/vgriddemo/refs/heads/main/antimeridian/data/h3_0_split.geojson">H3 splitting</option>
         </select>
     </div>
-    <script>
+    <script type="module">
+        import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
         const map = new maplibregl.Map({
             container: 'map',
             style: 'https://raw.githubusercontent.com/opengeoshub/vstyles/main/versatiles/eclipse.json',
@@ -69,6 +69,7 @@
             zoom: 0
         });
         map.addControl(new maplibregl.NavigationControl());
+        map.addControl(new maplibregl.GlobeControl());
 
         const datasetSelect = document.getElementById('datasetSelect');
         let activeDataset = datasetSelect.value;

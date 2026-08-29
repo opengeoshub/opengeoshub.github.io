@@ -76,8 +76,9 @@
 var map = L.map('map').setView([0, 0], 0);
 map.zoomControl.setPosition('topright');
 
-// Basemap (OpenStreetMap)
-L.tileLayer('https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png').addTo(map);
+L.tileLayer('https://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri'
+}).addTo(map);
 
 var geoLayer = null;
 var datasetSelect = document.getElementById('datasetSelect');

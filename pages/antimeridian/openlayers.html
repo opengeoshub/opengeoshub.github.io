@@ -70,8 +70,8 @@
 <script>
     const basemapLayer = new ol.layer.Tile({
         source: new ol.source.XYZ({
-            url: 'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-            attributions: '&copy; <a href="https://carto.com/" target="_blank" rel="noopener noreferrer">CARTO</a>'
+            url: 'https://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+            attributions: 'Tiles &copy; Esri'
         })
     });
 

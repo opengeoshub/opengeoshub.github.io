@@ -56,8 +56,9 @@
         });
         viewer.imageryLayers.addImageryProvider(
             new Cesium.UrlTemplateImageryProvider({
-                url: 'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-                maximumLevel: 20
+                url: 'https://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+                credit: 'Tiles © Esri',
+                maximumLevel: 16
             })
         );
         viewer.scene.globe.depthTestAgainstTerrain = true;

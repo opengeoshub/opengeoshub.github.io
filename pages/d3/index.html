@@ -136,84 +136,85 @@ h1 {
     <button id="pause-btn">Pause</button>
   </div>
 </div>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
-<script src="http://d3js.org/d3.geo.polyhedron.v0.min.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 <script>
 
 var width = 960,
     height = 500;
 
 var projections = [
-  {name: "Aitoff", projection: d3.geo.aitoff()},
-  {name: "Albers", projection: d3.geo.albers().scale(145).parallels([20, 50])},
-  {name: "August", projection: d3.geo.august().scale(60)},
-  {name: "Baker", projection: d3.geo.baker().scale(100)},
-  {name: "Berghaus", projection: d3.geo.berghaus().scale(100)},
-  {name: "Boggs", projection: d3.geo.boggs()},
-  {name: "Bonne", projection: d3.geo.bonne().scale(120)},
-  {name: "Bromley", projection: d3.geo.bromley()},
-  {name: "Collignon", projection: d3.geo.collignon().scale(93)},
-  {name: "Craster Parabolic", projection: d3.geo.craster()},
-  {name: "Eckert I", projection: d3.geo.eckert1().scale(165)},
-  {name: "Eckert II", projection: d3.geo.eckert2().scale(165)},
-  {name: "Eckert III", projection: d3.geo.eckert3().scale(180)},
-  {name: "Eckert IV", projection: d3.geo.eckert4().scale(180)},
-  {name: "Eckert V", projection: d3.geo.eckert5().scale(170)},
-  {name: "Eckert VI", projection: d3.geo.eckert6().scale(170)},
-  {name: "Eisenlohr", projection: d3.geo.eisenlohr().scale(60)},
-  {name: "Equirectangular (Plate Carrée)", projection: d3.geo.equirectangular()},
-  {name: "Fahey", projection: d3.geo.fahey().scale(120)},
-  {name: "Gall Stereographic", projection: d3.geo.cylindricalStereographic().parallel(45).scale(140)},
-  {name: "Ginzburg IV", projection: d3.geo.ginzburg4().scale(120)},
-  {name: "Ginzburg V", projection: d3.geo.ginzburg5().scale(120)},
-  {name: "Ginzburg VI", projection: d3.geo.ginzburg6().scale(120)},
-  {name: "Ginzburg VIII", projection: d3.geo.ginzburg8().scale(120)},
-  {name: "Ginzburg IX", projection: d3.geo.ginzburg9().scale(120)},
-  {name: "Gringorten", projection: d3.geo.gringorten().scale(220)},
-  {name: "Guyou", projection: d3.geo.guyou().scale(150)},
-  {name: "Hammer", projection: d3.geo.hammer().scale(165)},
-  {name: "Hammer Retroazimuthal", projection: d3.geo.hammerRetroazimuthal().scale(90)},
-  {name: "HEALPix", projection: d3.geo.healpix()},
-  {name: "Hill", projection: d3.geo.hill().scale(120)},
-  {name: "Goode Homolosine", projection: d3.geo.homolosine()},
-  {name: "Kavrayskiy VII", projection: d3.geo.kavrayskiy7()},
-  {name: "Lambert cylindrical equal-area", projection: d3.geo.cylindricalEqualArea()},
-  {name: "Lagrange", projection: d3.geo.lagrange().scale(120)},
-  {name: "Larrivée", projection: d3.geo.larrivee().scale(95)},
-  {name: "Laskowski", projection: d3.geo.laskowski().scale(120)},
-  {name: "Loximuthal", projection: d3.geo.loximuthal()},
-  // {name: "Mercator", projection: d3.geo.mercator().scale(100)},
-  {name: "Miller", projection: d3.geo.miller().scale(100)},
-  {name: "McBryde–Thomas Flat-Polar Parabolic", projection: d3.geo.mtFlatPolarParabolic()},
-  {name: "McBryde–Thomas Flat-Polar Quartic", projection: d3.geo.mtFlatPolarQuartic()},
-  {name: "McBryde–Thomas Flat-Polar Sinusoidal", projection: d3.geo.mtFlatPolarSinusoidal()},
-  {name: "Mollweide", projection: d3.geo.mollweide().scale(165)},
-  {name: "Natural Earth", projection: d3.geo.naturalEarth()},
-  {name: "Nell–Hammer", projection: d3.geo.nellHammer()},
-  {name: "Orthographic", projection: d3.geo.orthographic().scale(200)},
-  {name: "Polyconic", projection: d3.geo.polyconic().scale(100)},
-  {name: "Rectangular Polyconic", projection: d3.geo.rectangularPolyconic().scale(120)},
-  {name: "Robinson", projection: d3.geo.robinson()},
-  {name: "Sinusoidal", projection: d3.geo.sinusoidal()},
-  {name: "Sinu-Mollweide", projection: d3.geo.sinuMollweide()},
-  {name: "Stereographic", projection: d3.geo.stereographic()},
-  {name: "Times", projection: d3.geo.times().scale(140)},
-  {name: "van der Grinten", projection: d3.geo.vanDerGrinten().scale(75)},
-  {name: "van der Grinten II", projection: d3.geo.vanDerGrinten2().scale(75)},
-  {name: "van der Grinten III", projection: d3.geo.vanDerGrinten3().scale(75)},
-  {name: "van der Grinten IV", projection: d3.geo.vanDerGrinten4().scale(120)},
-  {name: "Wagner IV", projection: d3.geo.wagner4()},
-  {name: "Wagner VI", projection: d3.geo.wagner6()},
-  {name: "Wagner VII", projection: d3.geo.wagner7()},
-  {name: "Waterman", projection: d3.geo.polyhedron.waterman().scale(70)},
-  {name: "Winkel Tripel", projection: d3.geo.winkel3()}
+  {name: "Aitoff", projection: d3.geoAitoff()},
+  {name: "Albers", projection: d3.geoAlbers().scale(145).parallels([20, 50])},
+  {name: "August", projection: d3.geoAugust().scale(60)},
+  {name: "Baker", projection: d3.geoBaker().scale(100)},
+  {name: "Berghaus", projection: d3.geoBerghaus().scale(100)},
+  {name: "Boggs", projection: d3.geoBoggs()},
+  {name: "Bonne", projection: d3.geoBonne().scale(120)},
+  {name: "Bromley", projection: d3.geoBromley()},
+  {name: "Collignon", projection: d3.geoCollignon().scale(93)},
+  {name: "Craster Parabolic", projection: d3.geoCraster()},
+  {name: "Eckert I", projection: d3.geoEckert1().scale(165)},
+  {name: "Eckert II", projection: d3.geoEckert2().scale(165)},
+  {name: "Eckert III", projection: d3.geoEckert3().scale(180)},
+  {name: "Eckert IV", projection: d3.geoEckert4().scale(180)},
+  {name: "Eckert V", projection: d3.geoEckert5().scale(170)},
+  {name: "Eckert VI", projection: d3.geoEckert6().scale(170)},
+  {name: "Eisenlohr", projection: d3.geoEisenlohr().scale(60)},
+  {name: "Equal Earth", projection: d3.geoEqualEarth()},
+  {name: "Equirectangular (Plate Carrée)", projection: d3.geoEquirectangular()},
+  {name: "Fahey", projection: d3.geoFahey().scale(120)},
+  {name: "Gall Stereographic", projection: d3.geoCylindricalStereographic().parallel(45).scale(140)},
+  {name: "Ginzburg IV", projection: d3.geoGinzburg4().scale(120)},
+  {name: "Ginzburg V", projection: d3.geoGinzburg5().scale(120)},
+  {name: "Ginzburg VI", projection: d3.geoGinzburg6().scale(120)},
+  {name: "Ginzburg VIII", projection: d3.geoGinzburg8().scale(120)},
+  {name: "Ginzburg IX", projection: d3.geoGinzburg9().scale(120)},
+  {name: "Gringorten", projection: d3.geoGringorten().scale(220)},
+  {name: "Guyou", projection: d3.geoGuyou().scale(150)},
+  {name: "Hammer", projection: d3.geoHammer().scale(165)},
+  {name: "Hammer Retroazimuthal", projection: d3.geoHammerRetroazimuthal().scale(90)},
+  {name: "HEALPix", projection: d3.geoHealpix()},
+  {name: "Hill", projection: d3.geoHill().scale(120)},
+  {name: "Goode Homolosine", projection: d3.geoHomolosine()},
+  {name: "Kavrayskiy VII", projection: d3.geoKavrayskiy7()},
+  {name: "Lambert cylindrical equal-area", projection: d3.geoCylindricalEqualArea()},
+  {name: "Lagrange", projection: d3.geoLagrange().scale(120)},
+  {name: "Larrivée", projection: d3.geoLarrivee().scale(95)},
+  {name: "Laskowski", projection: d3.geoLaskowski().scale(120)},
+  {name: "Loximuthal", projection: d3.geoLoximuthal()},
+  {name: "Mercator", projection: d3.geoMercator().scale(100)},
+  {name: "Miller", projection: d3.geoMiller().scale(100)},
+  {name: "McBryde–Thomas Flat-Polar Parabolic", projection: d3.geoMtFlatPolarParabolic()},
+  {name: "McBryde–Thomas Flat-Polar Quartic", projection: d3.geoMtFlatPolarQuartic()},
+  {name: "McBryde–Thomas Flat-Polar Sinusoidal", projection: d3.geoMtFlatPolarSinusoidal()},
+  {name: "Mollweide", projection: d3.geoMollweide().scale(165)},
+  {name: "Natural Earth", projection: d3.geoNaturalEarth1()},
+  {name: "Nell–Hammer", projection: d3.geoNellHammer()},
+  {name: "Orthographic", projection: d3.geoOrthographic().scale(200)},
+  {name: "Polyconic", projection: d3.geoPolyconic().scale(100)},
+  {name: "Rectangular Polyconic", projection: d3.geoRectangularPolyconic().scale(120)},
+  {name: "Robinson", projection: d3.geoRobinson()},
+  {name: "Sinusoidal", projection: d3.geoSinusoidal()},
+  {name: "Sinu-Mollweide", projection: d3.geoSinuMollweide()},
+  {name: "Stereographic", projection: d3.geoStereographic()},
+  {name: "Times", projection: d3.geoTimes().scale(140)},
+  {name: "van der Grinten", projection: d3.geoVanDerGrinten().scale(75)},
+  {name: "van der Grinten II", projection: d3.geoVanDerGrinten2().scale(75)},
+  {name: "van der Grinten III", projection: d3.geoVanDerGrinten3().scale(75)},
+  {name: "van der Grinten IV", projection: d3.geoVanDerGrinten4().scale(120)},
+  {name: "Wagner IV", projection: d3.geoWagner4()},
+  {name: "Wagner VI", projection: d3.geoWagner6()},
+  {name: "Wagner VII", projection: d3.geoWagner7()},
+  {name: "Waterman", projection: d3.geoPolyhedralWaterman().scale(70)},
+  {name: "Winkel Tripel", projection: d3.geoWinkel3()}
 ];
 
 
 projections.forEach(function(o) {
-  o.projection.rotate([0, 0]).center([0, 0]);
+  if (o.projection.rotate) o.projection.rotate([0, 0]);
+  if (o.projection.center) o.projection.center([0, 0]);
 });
 
 var autoDelay = 2000,
@@ -223,10 +224,10 @@ var autoDelay = 2000,
 
 var projection = projections[i].projection;
 
-var path = d3.geo.path()
+var path = d3.geoPath()
     .projection(projection);
 
-var graticule = d3.geo.graticule();
+var graticule = d3.geoGraticule();
 
 var svg = d3.select("#map-wrapper").append("svg")
     .attr("width", width)
@@ -245,20 +246,18 @@ svg.append("defs").append("path")
 
 svg.append("use")
     .attr("class", "stroke")
-    .attr("xlink:href", "#sphere");
+    .attr("href", "#sphere");
 
 svg.append("use")
     .attr("class", "fill")
-    .attr("xlink:href", "#sphere");
+    .attr("href", "#sphere");
 
 graticulePath = svg.append("path")
-    .datum(graticule)
+    .datum(graticule())
     .attr("class", "graticule")
     .attr("d", path);
 
-d3.json("./world-110m.json", function(error, world) {
-  if (error) throw error;
-
+d3.json("./world-110m.json").then(function(world) {
   landPath = svg.insert("path", ".land")
       .datum(topojson.feature(world, world.objects.land))
       .attr("class", "land")
@@ -271,18 +270,14 @@ d3.json("./world-110m.json", function(error, world) {
   startAutoPlay(true);
 });
 
-d3.json("./man_head.geojson", function(error, head) {
-  if (error) throw error;
-
+d3.json("./man_head.geojson").then(function(head) {
   headData.man = head;
   if (currentHead === "man") {
     updateHeadPath();
   }
 });
 
-d3.json("./woman_head.geojson", function(error, head) {
-  if (error) throw error;
-
+d3.json("./woman_head.geojson").then(function(head) {
   headData.woman = head;
   if (currentHead === "woman") {
     updateHeadPath();
@@ -365,16 +360,17 @@ function projectionTween(projection0, projection1) {
   return function(d) {
     var t = 0;
 
-    var projection = d3.geo.projection(project)
+    var projection = d3.geoProjection(project)
         .scale(1)
         .translate([width / 2, height / 2]);
 
-    var path = d3.geo.path()
+    var path = d3.geoPath()
         .projection(projection);
 
-    function project(λ, φ) {
-      λ *= 180 / Math.PI, φ *= 180 / Math.PI;
-      var p0 = projection0([λ, φ]), p1 = projection1([λ, φ]);
+    function project(lambda, phi) {
+      lambda *= 180 / Math.PI, phi *= 180 / Math.PI;
+      var p0 = projection0([lambda, phi]), p1 = projection1([lambda, phi]);
+      if (!p0 || !p1) return [NaN, NaN];
       return [(1 - t) * p0[0] + t * p1[0], (1 - t) * -p0[1] + t * -p1[1]];
     }
 

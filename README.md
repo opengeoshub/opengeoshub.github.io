@@ -38,9 +38,9 @@
 
 - [vgrid Homepage](https://vgridhome.gishub.vn)
 
-- [DGGG Plugin](https://github.com/opengeos/GeoLibre/pull/1650) for [GeoLibre](https://github.com/opengeos/GeoLibre)
+- [DGGS Plugin](https://github.com/opengeos/GeoLibre/pull/1650) for [GeoLibre](https://github.com/opengeos/GeoLibre)
 
-- [DGGG Processing](https://github.com/opengeos/GeoLibre/pull/1710) for [GeoLibre](https://github.com/opengeos/GeoLibre)
+- [DGGS Processing](https://github.com/opengeos/GeoLibre/pull/1710) for [GeoLibre](https://github.com/opengeos/GeoLibre)
 
 - [Atimeridian Demo](https://opengeoshub.github.io/pages/antimeridian)
 

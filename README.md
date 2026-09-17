@@ -36,7 +36,7 @@
 
 - [vgrid-maplibre](https://github.com/opengeoshub/vgrid-maplibre), [vgrid-maplibre on NPM](https://www.npmjs.com/package/vgrid-maplibre), [vgrid-mapLire demo](https://opengeoshub.github.io/pages/vgridmaplibre)
 
-- [vgrid Homepage](https://vgridhome.gishub.vn)
+- [vgrid homepage](https://vgridhome.gishub.vn)
 
 - [DGGS Plugin](https://github.com/opengeos/GeoLibre/pull/1650) for [GeoLibre](https://github.com/opengeos/GeoLibre)
 

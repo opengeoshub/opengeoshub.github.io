@@ -55,7 +55,7 @@
 - [BecaGIS Plugin](https://github.com/opengeoshub/becagis)
 
   
-## Web Apps
+## Streamlit
 - [streamlit-geoprocessing](https://github.com/opengeoshub/geoprocessing)
 - [streamlit-becagis](https://github.com/opengeoshub/becagis_streamlit)
 

@@ -34,7 +34,7 @@
 
 - [vgridpandas](https://github.com/opengeoshub/vgridpandas), [vgridpandas on PyPI](https://pypi.org/project/vgridpandas/), [vgridpandas docs](https://vgridpandas.gishub.vn)
 
-- [vgrid-maplibre](https://github.com/opengeoshub/vgrid-maplibre), [vgrid-maplibre on NPM](https://www.npmjs.com/package/vgrid-maplibre), [vgrid-mapLire Demo](https://opengeoshub.github.io/pages/vgridmaplibre)
+- [vgrid-maplibre](https://github.com/opengeoshub/vgrid-maplibre), [vgrid-maplibre on NPM](https://www.npmjs.com/package/vgrid-maplibre), [vgrid-mapLire demo](https://opengeoshub.github.io/pages/vgridmaplibre)
 
 - [vgrid Homepage](https://vgridhome.gishub.vn)
 
@@ -42,11 +42,12 @@
 
 - [DGGS Processing](https://github.com/opengeos/GeoLibre/pull/1710) for [GeoLibre](https://github.com/opengeos/GeoLibre)
 
-- [Atimeridian Demo](https://opengeoshub.github.io/pages/antimeridian)
+- [Atimeridian demo](https://opengeoshub.github.io/pages/antimeridian)
 
 ## Vector Tiles
 - [vtiles](https://github.com/opengeoshub/vtiles)
 - [vstyles](https://github.com/opengeoshub/vstyles)
+- [Vietnam Basemaps](https://basemap.gishub.vn)
 
 
 ## QGIS Plugins

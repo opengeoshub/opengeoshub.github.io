@@ -19,6 +19,22 @@
             width: 100%;
             height: 100vh;
         }
+        .maplibre-control-zoomhome {
+            cursor: pointer;
+        }
+
+        .maplibre-control-zoomhome button {
+            width: 29px;
+            height: 29px;
+            background: transparent;
+        }
+
+        .maplibre-control-zoomhome img {
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin: 5px auto;
+        }
     </style>
 </head>
 
@@ -32,6 +48,8 @@
     
     <script type="module">
         import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
+        import { MapLibreAtmosphereEffects } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreAtmosphereEffects.ts';
+        import { MapLibreControlZoomHome } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreControlZoomHome.ts';
         import DIGIPINGrid from "https://unpkg.com/vgrid-maplibre/DIGIPIN/DGIGIPINGrid.js";
         // import DIGIPINGrid from './DGIGIPINGrid.js';
 
@@ -40,7 +58,7 @@
         const config = {
             lng: 78.9629,
             lat: 20.5937,
-            zoom: 3
+            zoom: 2
         };
         let currentPopup = null;
 
@@ -52,7 +70,10 @@
         })
 
         map.on('style.load', () => {
+            map.setProjection({ type: 'globe' });
             map.addControl(new maplibregl.GlobeControl());
+            map.addControl(new MapLibreControlZoomHome({ resetLngLat: [config.lng, config.lat], resetZoom: config.zoom }));
+            new MapLibreAtmosphereEffects(map);
             try {
                 const digipinGrid = new DIGIPINGrid(map, {
                     color: 'rgba(255, 0, 0, 1)',

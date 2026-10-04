@@ -47,6 +47,25 @@
             font-size: 13px;
             background: #fff;
         }
+        .maplibre-control-zoomhome,
+        .maplibre-control-autorotate {
+            cursor: pointer;
+        }
+
+        .maplibre-control-zoomhome button,
+        .maplibre-control-autorotate button {
+            width: 29px;
+            height: 29px;
+            background: transparent;
+        }
+
+        .maplibre-control-zoomhome img,
+        .maplibre-control-autorotate img {
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin: 5px auto;
+        }
     </style>
 </head>
 
@@ -62,14 +81,21 @@
     </div>
     <script type="module">
         import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
+        import { MapLibreAtmosphereEffects } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreAtmosphereEffects.ts';
+        import { MapLibreControlAutoRotate } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreControlAutoRotate.ts';
+        import { MapLibreControlZoomHome } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreControlZoomHome.ts';
         const map = new maplibregl.Map({
             container: 'map',
             style: 'https://raw.githubusercontent.com/opengeoshub/vstyles/main/versatiles/eclipse.json',
-            center: [0, 0],
-            zoom: 0
+            center: [180, 0],
+            zoom: 2
         });
         map.addControl(new maplibregl.NavigationControl());
+        map.once('style.load', () => map.setProjection({ type: 'globe' }));
         map.addControl(new maplibregl.GlobeControl());
+        map.addControl(new MapLibreControlAutoRotate());
+        map.addControl(new MapLibreControlZoomHome({ resetLngLat: [0, 0], resetZoom: 0 }));
+        new MapLibreAtmosphereEffects(map);
 
         const datasetSelect = document.getElementById('datasetSelect');
         let activeDataset = datasetSelect.value;

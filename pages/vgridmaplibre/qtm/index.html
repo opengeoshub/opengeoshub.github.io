@@ -18,6 +18,25 @@
       width: 100%;
       height: 100vh;
     }
+      .maplibre-control-zoomhome,
+      .maplibre-control-autorotate {
+          cursor: pointer;
+      }
+
+      .maplibre-control-zoomhome button,
+      .maplibre-control-autorotate button {
+          width: 29px;
+          height: 29px;
+          background: transparent;
+      }
+
+      .maplibre-control-zoomhome img,
+      .maplibre-control-autorotate img {
+          display: block;
+          width: 18px;
+          height: 18px;
+          margin: 5px auto;
+      }
   </style>
 </head>
 
@@ -30,12 +49,15 @@
 
   <script type="module">
     import * as maplibregl from 'https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs';
+    import { MapLibreAtmosphereEffects } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreAtmosphereEffects.ts';
+    import { MapLibreControlAutoRotate } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreControlAutoRotate.ts';
+    import { MapLibreControlZoomHome } from 'https://esm.sh/gh/opengeoshub/pop@main/src/lib/MapLibreControlZoomHome.ts';
     import QTMGrid from "https://unpkg.com/vgrid-maplibre/QTM/QTMGrid.js";
     // import QTMGrid from './QTMGrid.js';
     const config = {
       lng: 106.706585,
       lat: 10.775326,
-      zoom: 0
+      zoom: 1
     };
     let currentPopup = null;
 
@@ -51,7 +73,11 @@
     });
 
     map.on('style.load', () => {
+      map.setProjection({ type: 'globe' });
       map.addControl(new maplibregl.GlobeControl());
+      map.addControl(new MapLibreControlAutoRotate());
+      map.addControl(new MapLibreControlZoomHome({ resetLngLat: [config.lng, config.lat], resetZoom: config.zoom }));
+      new MapLibreAtmosphereEffects(map);
       try {
         const qtmGrid = new QTMGrid(map, {
           color: 'rgba(255, 0, 0, 1)',

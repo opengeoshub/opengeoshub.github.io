@@ -44,6 +44,8 @@
 
 - [Atimeridian demo](https://opengeoshub.github.io/pages/antimeridian)
 
+- [World population visualization](https://pop.gishub.vn)
+
 ## Vector Tiles
 - [vtiles](https://github.com/opengeoshub/vtiles)
 - [vstyles](https://github.com/opengeoshub/vstyles)
